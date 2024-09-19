@@ -1,5 +1,6 @@
 <div class="fruitlist_content">
-    @for(fruit of fruitlist; track fruit.name; let index = $index){
-        <app-singlefruit [fruitNumber]="index"></app-singlefruit> 
+    @for(singlefruit of fruitlist; track singlefruit.name; let index = $index){
+        
+        <app-singlefruit [fruit]="singlefruit"></app-singlefruit> 
     }
 </div>
