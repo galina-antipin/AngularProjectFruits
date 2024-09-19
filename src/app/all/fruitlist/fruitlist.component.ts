@@ -15,6 +15,7 @@ export class FruitlistComponent {
   fontColorBad = 'red';
 
   fruitlist = [
+
     {
       name: "Banane",
       img:"banana.png",
@@ -57,7 +58,11 @@ export class FruitlistComponent {
     },
   ]
 
-  nameLog(name:string){
-    console.log(name);
+  addComment(comment:string, index:number){
+this.fruitlist[index].reviews.push({name: 'Ulli',
+  text:comment,
+})
   }
+
+
 }

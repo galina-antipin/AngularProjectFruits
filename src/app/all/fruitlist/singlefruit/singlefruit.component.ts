@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './singlefruit.component.html',
   styleUrl: './singlefruit.component.scss'
 })
+
 export class SinglefruitComponent {
 @Input()fruit =     {
   name: "Apfel",
@@ -17,11 +18,14 @@ export class SinglefruitComponent {
   stars: 2.3,
   reviews:[{name: "Waldemar W.", text: "gut für Obstsalat"},{name: "Olaf P.", text: "Kann man mal machen"}],
 };
+
 inputData = '';
+
 @Output()fruitname = new EventEmitter<string>();
 
 sendInputData(){
-  this.fruitname.emit(this.fruit.name)
+  this.fruitname.emit(this.inputData);
+  this.inputData = '';
 
 }
 }
